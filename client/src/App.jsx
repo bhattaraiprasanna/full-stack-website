@@ -12,13 +12,14 @@ import AddCourse from './pages/educator/AddCourse'
 import MyCourses from './pages/educator/MyCourses'
 import StudentsEnrolled from './pages/educator/StudentsEnrolled'
 import Navbar from './components/student/Navbar'
+import Hero from './components/student/Hero'
 
 const App = () => {
   const isEducatorRoute = useMatch('/educator/*')
   return (
     <div className='text-defult min-h-screen bg-white'>
 
-      {!isEducatorRoute && <Navbar /> }
+      {!isEducatorRoute && <Navbar /> } 
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/course-list' element={<CourseList />} />
