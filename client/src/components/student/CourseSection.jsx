@@ -1,9 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CourseSection = () => {
   return (
     <div>
-      <h1>Courses Section</h1>
+      <h2>Learn from the best</h2>
+      <p>Discover our top-rated courses across various categories. From coding and design to business and wellness, 
+        our courses are crafted to deliver results.
+      </p>
+      <Link>Show all courses</Link>
     </div>
   )
 }
