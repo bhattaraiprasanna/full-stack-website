@@ -8,7 +8,7 @@ const CourseCard = ({course}) => {
 
   return ( 
     <div>
-      <img src={course.courseThumbmail} alt="course title" />
+      <img src={course.courseThumbnail} alt="course title" />
       <div>
         <h3>{course.courseTitle}</h3> 
         <p>{course.educator.name}</p>
