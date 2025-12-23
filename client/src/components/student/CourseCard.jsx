@@ -1,13 +1,14 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
 import { AppContext } from '../context/AppContext'
+import { useContext } from 'react'
 
 const CourseCard = ({course}) => {
   const{ currency } = useContext(AppContext)
 
   return ( 
     <div>
-      <img src={course.courseThumbmail} alt="" />
+      <img src={course.courseThumbmail} alt="course title" />
       <div>
         <h3>{course.courseTitle}</h3> 
         <p>{course.educator.name}</p>

@@ -1,10 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { AppContext } from '../context/AppContext'
-import CourseCard from './CourseCard'
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AppContext } from '../context/AppContext';
+import CourseCard from './CourseCard';
 
 const CourseSection = () => {
   const { allCourses } = useContext(AppContext);
+
   return (
     <div className='py-16 md:px-40 px-8'>
       <h2 className='text-3xl font-medium text-gray-800'>Learn from the best</h2>
@@ -18,7 +19,7 @@ const CourseSection = () => {
       className='text-gray-500 border border-gray-500/30 px-10 py-3 rounded'
       >Show all courses</Link>
     </div>
-  )
-}
+  );
+};
 
-export default CourseSection
+export default CourseSection;

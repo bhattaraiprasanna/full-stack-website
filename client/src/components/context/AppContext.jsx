@@ -1,7 +1,7 @@
 import { createContext, use } from "react";
 import { dummyCourses } from "../../assets/assets";
-
-export const AppContext = createContext();
+import { useEffect, useState } from "react";
+export const  AppContext = createContext();
 export const AppContextProvider = (props) =>{
 const currency = import.meta.env.VITE_CURRENCY || '$';
      
@@ -17,7 +17,7 @@ const currency = import.meta.env.VITE_CURRENCY || '$';
         }
     return(
         
-        <AppContext.Provider value={{value}}>
+        <AppContext.Provider value={value}>
             {props.children}
         </AppContext.Provider>
     )
