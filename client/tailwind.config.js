@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      // add custom grid template columns
+      gridTemplateColumns: { 
+        'auto': 'repeat(auto-fit, minmax(200px, 1fr))'
+      },
       fontSize: {
         "home-heading-large": ["48px", { lineHeight: "56px" }],
         "home-heading-small": ["28px", { lineHeight: "34px" }],
