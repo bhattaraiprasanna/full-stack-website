@@ -5,7 +5,7 @@ import { useClerk , UserButton , useUser } from '@clerk/clerk-react'
 import { AppContext } from '../context/AppContext'
 
 const Navbar = () => {
-  const {navigate} = useContext(AppContext);
+  const {navigate , isEducator} = useContext(AppContext);
   const isCourseListPage = location.pathname.includes('/course-list');
 
   const { openSignIn } = useClerk();
@@ -26,7 +26,7 @@ const Navbar = () => {
         {/* SHOW ONLY WHEN USER IS LOGGED IN */}
         {user && (
           <div className='items-center flex gap-5'>
-            <button>Become Educator</button> |
+            <button onClick={()=> {navigate('/educator')}}>{isEducator ? 'Educator Dashboard' : 'Become Educator'}</button> |
             <Link to='/my-enrollments'>My Enrollments</Link>
           </div>
         )}
@@ -51,7 +51,8 @@ const Navbar = () => {
           {/* SHOW ONLY WHEN USER IS LOGGED IN */}
           {user && (
           <div className='items-center flex gap-5'>
-            <button>Become Educator</button> |
+            <button onClick={()=> {navigate('/educator')}}>{isEducator ? 'Educator Dashboard' : 'Become Educator'}</button> |
+
             <Link to='/my-enrollments'>My Enrollments</Link>
           </div>
         )}
